@@ -16,7 +16,7 @@ function DaftarAsmaulhusna() {
 
   return (
     <div
-      className="relative min-h-screen flex flex-col items-center p-5 text-white bg-fixed bg-[url('/src/assets/biru.png')] "
+      className="relative min-h-screen flex flex-col items-center p-5 text-white bg-fixed bg-[url('/biru.png')] "
      
     >
       {/* Efek Overlay agar teks tetap terbaca */}
@@ -52,14 +52,14 @@ function DaftarAsmaulhusna() {
               {/* Hiasan Islami di atas */}
               <div className="absolute top-2 left-2">
                 <img
-                  src="/src/assets/hijau.png"
+                  src="/hijau.png"
                   alt="Lentera"
                   className="w-10 h-10"
                 />
               </div>
               <div className="absolute top-2 right-2">
                 <img
-                  src="/src/assets/hijau.png"
+                  src="/hijau.png"
                   alt="Lentera"
                   className="w-10 h-10"
                 />

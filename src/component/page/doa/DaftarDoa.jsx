@@ -12,7 +12,7 @@ function DaftarDoa() {
   }, []);
 
   return (
-    <div className="w-full min-h-screen bg-[url('/src/assets/lentera.png')] bg-cover bg-center md:bg-contain bg-no-repeat bg-fixed open">
+    <div className="w-full min-h-screen bg-[url('/lentera.png')] bg-cover bg-center md:bg-contain bg-no-repeat bg-fixed open">
       <NavLink to="/" className="absolute left-2 top-6">
         <svg
           className="w-6 h-6"

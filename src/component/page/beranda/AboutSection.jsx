@@ -4,7 +4,7 @@ function AboutSection() {
   return (
     <div className="flex flex-col items-start p-4 h-screen backdrop-blur-sm">
       <img
-        src="./src/assets/quran-removebg-preview.png"
+        src="/quran-removebg-preview.png"
         alt=""
         className="absolute top-0 left-13 h-70 w-70 lg:mt-30 "
       />

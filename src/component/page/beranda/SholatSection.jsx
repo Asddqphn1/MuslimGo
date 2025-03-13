@@ -5,7 +5,7 @@ function SholatSection(){
       <div className="relative flex flex-col lg:flex-row-reverse justify-center items-center open h-screen backdrop-blur-sm">
         <div className="relative lg:w-80 lg:h-80 lg:top-0 w-50 h-50">
           <img
-            src="./src/assets/sholat.png"
+            src="/sholat.png"
             alt=""
             className="absolute lg:top-0 lg:right-0 z-9 -top-35 right-4 lg:w-100 lg:h-100 "
           />

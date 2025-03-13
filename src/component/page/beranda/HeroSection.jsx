@@ -16,7 +16,7 @@ function HeroSection() {
           />
         </svg>
         <img
-          src="./src/assets/mesjidkartun.png"
+          src="/mesjidkartun.png"
           alt=""
           className="absolute top-10 right-2 z-9 h-60 w-60"
         />

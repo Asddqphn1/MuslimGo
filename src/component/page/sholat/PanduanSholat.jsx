@@ -16,16 +16,16 @@ function PanduanSholat() {
 
   // Daftar gambar untuk setiap bacaan sholat
   const images = [
-    "/src/assets/takbiratulihram.png",
-    "/src/assets/alfatihah.png",
-    "/src/assets/iftittah.png",
-    "/src/assets/rukuk.png",
-    "/src/assets/iktidal.png",
-    "/src/assets/sujud.png",
-    "/src/assets/duduk-diantara.png",
-    "/src/assets/duduk-diantara.png",
-    "/src/assets/duduk-diantara.png",
-    "/src/assets/salam.png",
+    "/takbiratulihram.png",
+    "/alfatihah.png",
+    "/iftittah.png",
+    "/rukuk.png",
+    "/iktidal.png",
+    "/sujud.png",
+    "/duduk-diantara.png",
+    "/duduk-diantara.png",
+    "/duduk-diantara.png",
+    "/salam.png",
   ];
 
   return (

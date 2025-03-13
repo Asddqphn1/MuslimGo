@@ -10,7 +10,7 @@ import SholatSection from "./SholatSection";
 function Home() {
   return (
     <>
-      <div className="bg-[url(./src/assets/home-bg.jpg)]  text-white bg-repeat">
+      <div className="bg-[url(/home-bg.jpg)]  text-white bg-repeat">
         <HeaderNav/>
         <HeroSection />
         <SholatSection />

@@ -16,7 +16,7 @@ function DoaSection() {
             />
           </svg>
           <img
-            src="./src/assets/berdoa.png"
+            src="/berdoa.png"
             alt=""
             className="absolute lg:top-20 lg:right-0 z-9 top-10 right-4 "
           />

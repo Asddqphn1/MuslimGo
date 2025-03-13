@@ -4,7 +4,7 @@ function SholatNiatSection() {
 
 const navigasi = useNavigate()
   return (
-    <div className="min-h-screen bg-[url('/src/assets/lentera-removebg-preview.png')] bg-repeat relative flex flex-col items-center py-10 overflow-hidden">
+    <div className="min-h-screen bg-[url('/lentera-removebg-preview.png')] bg-repeat relative flex flex-col items-center py-10 overflow-hidden">
       {/* Bulan Sabit & Bintang */}
 
       <NavLink to="/" className="absolute left-2 top-2">
@@ -28,7 +28,7 @@ const navigasi = useNavigate()
           onClick={() => navigasi("/sholat/niat")}
         >
           <img
-            src="./src/assets/sholat.png"
+            src="/sholat.png"
             alt="Niat Sholat"
             className="w-20 h-20 mb-4"
           />
@@ -39,7 +39,7 @@ const navigasi = useNavigate()
           className="border-4 border-yellow-400 bg-white shadow-lg rounded-xl p-6 flex flex-col items-center text-center transition-transform duration-300 hover:scale-105 hover:shadow-2xl"
         >
           <img
-            src="./src/assets/images-removebg-preview.png"
+            src="/images-removebg-preview.png"
             alt="Panduan Sholat"
             className="w-20 h-20 mb-4"
           />
@@ -52,7 +52,7 @@ const navigasi = useNavigate()
           onClick={() => navigasi("/sholat/jadwal")}
         >
           <img
-            src="./src/assets/masjid.png"
+            src="/masjid.png"
             alt="Jadwal Sholat"
             className="w-20 h-20 mb-4"
           />

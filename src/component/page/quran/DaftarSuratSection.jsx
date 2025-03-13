@@ -44,7 +44,7 @@ function DaftarSuratSection() {
           Reset
         </button>
       </div>
-      <div className="p-5 grid lg:grid-cols-3 gap-2 grid-cols-1 bg-[url(./src/assets/lentera.png)] bg-repeat relative mt-18">
+      <div className="p-5 grid lg:grid-cols-3 gap-2 grid-cols-1 bg-[url(/lentera.png)] bg-repeat relative mt-18">
         {filteredSurat.map((surat) => (
           <div
             key={surat.nomor}

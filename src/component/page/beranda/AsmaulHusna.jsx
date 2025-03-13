@@ -5,7 +5,7 @@ function AsmaulHusna() {
     <div className="h-screen flex justify-center items-center backdrop-blur-sm">
       <div className="flex flex-col items-center text-center gap-6">
         <img
-          src="./src/assets/asmaulhusna.jpeg"
+          src="/asmaulhusna.jpeg"
           alt="Asmaul Husna"
           className="w-60 h-60 rounded-full object-cover"
         />
