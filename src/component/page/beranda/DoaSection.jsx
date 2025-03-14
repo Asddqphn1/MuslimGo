@@ -4,21 +4,10 @@ function DoaSection() {
     return (
       <div className="relative flex flex-col lg:flex-row-reverse justify-center items-center open h-screen backdrop-blur-sm">
         <div className="relative lg:w-80 lg:h-80 lg:top-0 w-50 h-50">
-          <svg
-            viewBox="0 0 200 200"
-            xmlns="http://www.w3.org/2000/svg"
-            className="absolute lg:top-0 lg:left-7 z-0 lg:w-80 lg:h-80"
-          >
-            <path
-              fill="#0e8c15"
-              d="M67.7,-23.2C76.5,5.2,64.8,39.1,41.4,55.9C18,72.6,-17,72.1,-41.4,54.9C-65.7,37.7,-79.4,3.8,-70.7,-24.4C-62,-52.6,-31,-75.1,-0.8,-74.8C29.4,-74.5,58.9,-51.6,67.7,-23.2Z"
-              transform="translate(100 100)"
-            />
-          </svg>
           <img
             src="/berdoa.png"
             alt=""
-            className="absolute lg:top-20 lg:right-0 z-9 top-10 right-4 "
+            className="absolute lg:top-20 lg:right-0 z-9 top-10 right-4 rounded-bl-full "
           />
         </div>
 
