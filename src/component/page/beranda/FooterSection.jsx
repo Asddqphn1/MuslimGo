@@ -4,7 +4,6 @@ function FooterSection() {
   return (
     <footer className="bg-gray-100 w-full">
       <div className="mx-auto max-w-5xl px-4 py-16 sm:px-6 lg:px-8">
-
         <p className="mx-auto mt-6 max-w-md text-center leading-relaxed text-gray-500">
           MuslimGo. © 2025. All rights reserved.
         </p>
@@ -18,7 +17,7 @@ function FooterSection() {
         <ul className="mt-12 flex justify-center gap-6 md:gap-8">
           <li>
             <a
-              href="#"
+              href="https://www.facebook.com/share/1AB69riN57/"
               rel="noreferrer"
               target="_blank"
               className="text-gray-700 transition hover:text-gray-700/75"
@@ -41,7 +40,7 @@ function FooterSection() {
 
           <li>
             <a
-              href="#"
+              href="https://www.instagram.com/diqqipohan?igsh=bHk0OGducnR1dHUx"
               rel="noreferrer"
               target="_blank"
               className="text-gray-700 transition hover:text-gray-700/75"
@@ -62,11 +61,9 @@ function FooterSection() {
             </a>
           </li>
 
-          
-
           <li>
             <a
-              href="#"
+              href="https://github.com/Asddqphn1"
               rel="noreferrer"
               target="_blank"
               className="text-gray-700 transition hover:text-gray-700/75"
@@ -86,8 +83,6 @@ function FooterSection() {
               </svg>
             </a>
           </li>
-
-         
         </ul>
       </div>
     </footer>
