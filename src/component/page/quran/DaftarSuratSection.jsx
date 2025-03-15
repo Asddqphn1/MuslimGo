@@ -6,11 +6,13 @@ function DaftarSuratSection() {
   const [surat, setSurat] = useState([]);
   const [searchTerm, setSearchTerm] = useState("");
   const navigasi = useNavigate();
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     fetch("https://equran.id/api/v2/surat")
       .then((response) => response.json())
-      .then(({ data }) => setSurat(data));
+      .then(({ data }) => setSurat(data))
+      .then(() => setLoading(false));
   }, []);
 
   const filteredSurat = surat.filter((s) =>
@@ -44,34 +46,42 @@ function DaftarSuratSection() {
           Reset
         </button>
       </div>
-      <div className="p-5 grid lg:grid-cols-3 gap-2 grid-cols-1 bg-[url(/lentera.png)] bg-repeat relative mt-18">
-        {filteredSurat.map((surat) => (
-          <div
-            key={surat.nomor}
-            className="flex justify-between items-center p-5 border rounded-4xl noto cursor-pointer backdrop-blur-md relative"
-            onClick={() => {
-              navigasi(`/quran/${surat.nomor}`);
-            }}
-          >
-            <h1 className="text-lg flex items-center justify-center relative">
-              <span className="text-3xl">(۝)</span>
-              <span className="absolute">
-                {convertToArabicNumeric(surat.nomor)}
-              </span>
-            </h1>
+      {loading ? (
+        <div className="flex justify-center items-center min-h-[200px]">
+          <div className="animate-spin rounded-full h-10 w-10 border-b-2 border-yellow-400"></div>
 
-            <div className="w-70 ml-10">
-              <h2 className="text-sm open font-bold">
-                {surat.namaLatin} <span>({surat.arti})</span>
-              </h2>
-              <p className="text-xs open font-normal">
-                {surat.tempatTurun} ▪️ {surat.jumlahAyat} ayat
-              </p>
+          <p className="ml-3 text-lg">Memuat data...</p>
+        </div>
+      ) : (
+        <div className="p-5 grid lg:grid-cols-3 gap-2 grid-cols-1 bg-[url(/lentera.png)] bg-repeat relative mt-18">
+          {filteredSurat.map((surat) => (
+            <div
+              key={surat.nomor}
+              className="flex justify-between items-center p-5 border rounded-4xl noto cursor-pointer backdrop-blur-md relative"
+              onClick={() => {
+                navigasi(`/quran/${surat.nomor}`);
+              }}
+            >
+              <h1 className="text-lg flex items-center justify-center relative">
+                <span className="text-3xl">(۝)</span>
+                <span className="absolute">
+                  {convertToArabicNumeric(surat.nomor)}
+                </span>
+              </h1>
+
+              <div className="w-70 ml-10">
+                <h2 className="text-sm open font-bold">
+                  {surat.namaLatin} <span>({surat.arti})</span>
+                </h2>
+                <p className="text-xs open font-normal">
+                  {surat.tempatTurun} ▪️ {surat.jumlahAyat} ayat
+                </p>
+              </div>
+              <h2 className="w-15 ">{surat.nama}</h2>
             </div>
-            <h2 className="w-15 ">{surat.nama}</h2>
-          </div>
-        ))}
-      </div>
+          ))}
+        </div>
+      )}
     </>
   );
 }

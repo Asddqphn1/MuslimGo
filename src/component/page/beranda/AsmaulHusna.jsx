@@ -3,15 +3,15 @@ import { NavLink } from "react-router-dom";
 function AsmaulHusna() {
   return (
     <div className="h-screen flex justify-center items-center backdrop-blur-sm">
-      <div className="flex flex-col items-center text-center gap-6">
+      <div className="flex flex-col items-center lg:text-center gap-6">
         <img
           src="/asmaulhusna.jpeg"
           alt="Asmaul Husna"
           className="w-60 h-60 rounded-full object-cover"
         />
 
-        <div>
-          <p className="text-lg lg:text-3xl font-bold">
+        <div className="p-4 text-justify">
+          <p className="text-lg lg:text-3xl font-bold text-center mb-10">
             Asmaul Husna - Nama-Nama Indah Allah
           </p>
           <p className="open italic">

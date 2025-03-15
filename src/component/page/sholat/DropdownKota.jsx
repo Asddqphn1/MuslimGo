@@ -12,9 +12,7 @@ function DropdownKota({setKotaJadwal, kota}) {
           onChange={(e) => setKotaJadwal(e.target.value)}
           className="border rounded-lg p-1 bg-gray-300"
         >
-          <option value="" disabled selected>
-            Pilih Kota
-          </option>
+          
           {kota.map((item, index) => (
             <option key={index} value={item}>
               {item}

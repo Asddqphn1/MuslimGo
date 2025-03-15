@@ -1,27 +1,28 @@
 import { NavLink } from "react-router-dom";
 
-function SholatSection(){
-    return (
-      <div className="relative flex flex-col lg:flex-row-reverse justify-center items-center open h-screen backdrop-blur-sm">
-        <div className="relative lg:w-80 lg:h-80 lg:top-0 w-50 h-50">
-          <img
-            src="/sholat.png"
-            alt=""
-            className="absolute lg:top-0 lg:right-0 z-9 -top-35 right-4 lg:w-100 lg:h-100 "
-          />
-        </div>
+function SholatSection() {
+  return (
+    <div className="relative flex flex-col lg:flex-row-reverse justify-center items-center open h-screen backdrop-blur-sm">
+      <div className="relative lg:w-80 lg:h-80 lg:top-0 w-50 h-50">
+        <img
+          src="/sholat.png"
+          alt=""
+          className="absolute lg:top-0 lg:right-0 z-9 -top-35 right-4 lg:w-100 lg:h-100 "
+        />
+      </div>
 
-        <div className="relative z-10 lg:h-80 lg:top-15 p-8 -mt-30 lg:mt-0">
-          <h1 className="text-justify lg:w-150 font-semibold">
-            Sholat adalah cahaya yang menerangi hati, menguatkan jiwa, dan
-            mendekatkan kita kepada Sang Pencipta. Jangan jadikan sholat sebagai
-            kewajiban semata, tapi rasakanlah sebagai kebutuhan. Raih ketenangan
-            dan keberkahan dalam setiap sujud. SholatGo menyediakan daftar niat, panduan sholat dan jadwal sholat
-          </h1>
-        </div>
+      <div className="relative z-10 lg:h-80 lg:top-15 p-8 -mt-30 lg:mt-0">
+        <h1 className="text-justify lg:w-150 font-semibold">
+          Sholat adalah cahaya yang menerangi hati, menguatkan jiwa, dan
+          mendekatkan kita kepada Sang Pencipta. Jangan jadikan sholat sebagai
+          kewajiban semata, tapi rasakanlah sebagai kebutuhan. Raih ketenangan
+          dan keberkahan dalam setiap sujud. SholatGo menyediakan daftar niat,
+          panduan sholat dan jadwal sholat
+        </h1>
+
         <NavLink
           to="/sholat"
-          className="cursor-pointer text-white font-semibold py-2 px-4 rounded-lg bg-sky-500 hover:bg-sky-600 transition-all duration-300 ease-in-out transform hover:scale-105 shadow-lg hover:shadow-xl border border-sky-600 flex items-center gap-3 w-40 h-12  lg:absolute lg:left-90 -ml-40 lg:mt-65 z-18"
+          className="cursor-pointer text-white font-semibold py-2 px-4 rounded-lg bg-sky-500 hover:bg-sky-600 transition-all duration-300 ease-in-out transform hover:scale-105 shadow-lg hover:shadow-xl border border-sky-600 flex items-center gap-3 w-40 h-12 mt-10 z-18"
         >
           SholatGo
           <svg
@@ -33,7 +34,8 @@ function SholatSection(){
           </svg>
         </NavLink>
       </div>
-    );
+    </div>
+  );
 }
 
-export default SholatSection
+export default SholatSection;

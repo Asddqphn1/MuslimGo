@@ -5,13 +5,11 @@ import { NavLink } from "react-router-dom";
 function JadwalSholat() {
   const [kota, setKota] = useState([]);
   const [jadwal, setJadwal] = useState([]);
-  const [kotaJadwal, setKotaJadwal] = useState(null);
+  const [kotaJadwal, setKotaJadwal] = useState("acehbarat");
   const today = new Date().toISOString().split("T")[0];
   const [tahun, setTahun] = useState(today.split("-")[0]);
   const [bulan, setBulan] = useState(today.split("-")[1]);
-
-
-  
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     fetch(
@@ -27,6 +25,7 @@ function JadwalSholat() {
     )
       .then((response) => response.json())
       .then((data) => setJadwal(data.length > 0 ? data : null))
+      .then(() => setLoading(false))
       .catch(() => setJadwal(null));
   }, [kotaJadwal, tahun, bulan]);
 
@@ -67,50 +66,58 @@ function JadwalSholat() {
           </select>
         </div>
       </div>
-      <div className="mt-6 w-full max-w-2xl overflow-x-auto">
-        {jadwal ? (
-          <table className="w-full bg-white shadow-lg rounded-lg overflow-hidden">
-            <thead className="bg-green-700 text-white">
-              <tr>
-                <th className="p-3">Tanggal</th>
-                <th className="p-3">Imsyak</th>
-                <th className="p-3">Shubuh</th>
-                <th className="p-3">Terbit</th>
-                <th className="p-3">Dzuhur</th>
-                <th className="p-3">Ashar</th>
-                <th className="p-3">Maghrib</th>
-                <th className="p-3">Isya</th>
-              </tr>
-            </thead>
-            <tbody>
-              {jadwal.map((item, index) => {
-                const isToday = item.tanggal === today.split("-").join("-");
-                return (
-                  <tr
-                    key={index}
-                    className={`text-center border-b border-gray-300 ${
-                      isToday ? "bg-yellow-200 font-bold" : ""
-                    }`}
-                  >
-                    <td className="p-3">{item.tanggal}</td>
-                    <td className="p-3">{item.imsyak}</td>
-                    <td className="p-3">{item.shubuh}</td>
-                    <td className="p-3">{item.terbit}</td>
-                    <td className="p-3">{item.dzuhur}</td>
-                    <td className="p-3">{item.ashr}</td>
-                    <td className="p-3">{item.magrib}</td>
-                    <td className="p-3">{item.isya}</td>
-                  </tr>
-                );
-              })}
-            </tbody>
-          </table>
-        ) : (
-          <p className="text-red-600 font-bold text-lg mt-4">
-            Belum update jadwal sholat brooo 😊😊😊😊😊
-          </p>
-        )}
-      </div>
+      {loading ? (
+        <div className="flex justify-center items-center min-h-[200px]">
+          <div className="animate-spin rounded-full h-10 w-10 border-b-2 border-yellow-400"></div>
+
+          <p className="ml-3 text-lg">Memuat data...</p>
+        </div>
+      ) : (
+        <div className="mt-6 w-full max-w-2xl overflow-x-auto">
+          {jadwal ? (
+            <table className="w-full bg-white shadow-lg rounded-lg overflow-hidden">
+              <thead className="bg-green-700 text-white">
+                <tr>
+                  <th className="p-3">Tanggal</th>
+                  <th className="p-3">Imsyak</th>
+                  <th className="p-3">Shubuh</th>
+                  <th className="p-3">Terbit</th>
+                  <th className="p-3">Dzuhur</th>
+                  <th className="p-3">Ashar</th>
+                  <th className="p-3">Maghrib</th>
+                  <th className="p-3">Isya</th>
+                </tr>
+              </thead>
+              <tbody>
+                {jadwal.map((item, index) => {
+                  const isToday = item.tanggal === today.split("-").join("-");
+                  return (
+                    <tr
+                      key={index}
+                      className={`text-center border-b border-gray-300 ${
+                        isToday ? "bg-yellow-200 font-bold" : ""
+                      }`}
+                    >
+                      <td className="p-3">{item.tanggal}</td>
+                      <td className="p-3">{item.imsyak}</td>
+                      <td className="p-3">{item.shubuh}</td>
+                      <td className="p-3">{item.terbit}</td>
+                      <td className="p-3">{item.dzuhur}</td>
+                      <td className="p-3">{item.ashr}</td>
+                      <td className="p-3">{item.magrib}</td>
+                      <td className="p-3">{item.isya}</td>
+                    </tr>
+                  );
+                })}
+              </tbody>
+            </table>
+          ) : (
+            <p className="text-red-600 font-bold text-lg mt-4">
+              Belum update jadwal sholat brooo 😊😊😊😊😊
+            </p>
+          )}
+        </div>
+      )}
     </div>
   );
 }

@@ -1,31 +1,30 @@
 import { NavLink } from "react-router-dom";
 
 function DoaSection() {
-    return (
-      <div className="relative flex flex-col lg:flex-row-reverse justify-center items-center open h-screen backdrop-blur-sm">
-        <div className="relative lg:w-80 lg:h-80 lg:top-0 w-50 h-50">
-          <img
-            src="/berdoa.png"
-            alt=""
-            className="absolute lg:top-20 lg:right-0 z-9 top-10 right-4 rounded-bl-full "
-          />
-        </div>
+  return (
+    <div className="relative flex flex-col lg:flex-row-reverse justify-center items-center open h-screen backdrop-blur-sm">
+      <div className="relative lg:w-80 lg:h-80 lg:top-0 w-50 h-50">
+        <img
+          src="/berdoa.png"
+          alt=""
+          className="absolute lg:top-20 lg:right-0 z-9 top-10 right-4 rounded-bl-full "
+        />
+      </div>
 
-        <div className="relative z-10 lg:h-80 lg:top-0 p-8 lg:bg-[#C06826] bg-opacity-50 rounded-lg shadow-lg">
-          <h1 className="text-white text-justify lg:w-150 font-extrabold">
-            DoaGO adalah fitur dalam Muslim GO yang dirancang untuk membantu
-            umat Muslim dalam mengamalkan doa-doa harian dengan mudah. Di
-            dalamnya, tersedia kumpulan doa untuk berbagai situasi dalam
-            kehidupan sehari-hari, lengkap dengan teks Arab, latin, dan
-            terjemahan. Dengan DoaGO, amalan harian jadi lebih mudah, membantu
-            kita selalu terhubung dengan Allah dalam setiap aktivitas. Jadikan
-            doa sebagai bagian dari hidupmu!🌿
-          </h1>
-        </div>
+      <div className="relative z-10 lg:h-80 lg:top-0 p-8 lg:bg-[#C06826] bg-opacity-50 rounded-lg shadow-lg">
+        <h1 className="text-white text-justify lg:w-150 font-extrabold">
+          DoaGO adalah fitur dalam Muslim GO yang dirancang untuk membantu umat
+          Muslim dalam mengamalkan doa-doa harian dengan mudah. Di dalamnya,
+          tersedia kumpulan doa untuk berbagai situasi dalam kehidupan
+          sehari-hari, lengkap dengan teks Arab, latin, dan terjemahan. Dengan
+          DoaGO, amalan harian jadi lebih mudah, membantu kita selalu terhubung
+          dengan Allah dalam setiap aktivitas. Jadikan doa sebagai bagian dari
+          hidupmu!🌿
+        </h1>
 
         <NavLink
           to="/doa"
-          className="cursor-pointer text-white font-semibold py-2 px-4 rounded-lg bg-sky-500 hover:bg-sky-600 transition-all duration-300 ease-in-out transform hover:scale-105 shadow-lg hover:shadow-xl border border-sky-600 flex items-center gap-3 w-40 h-12 mt-2 lg:absolute lg:left-95 -ml-40 lg:mt-75 z-18"
+          className="cursor-pointer text-white font-semibold py-2 px-4 rounded-lg bg-sky-500 hover:bg-sky-600 transition-all duration-300 ease-in-out transform hover:scale-105 shadow-lg hover:shadow-xl border border-sky-600 flex items-center gap-3 w-40 h-12 mt-10 z-18"
         >
           DoaGo
           <svg
@@ -37,7 +36,8 @@ function DoaSection() {
           </svg>
         </NavLink>
       </div>
-    );
+    </div>
+  );
 }
 
 export default DoaSection;
